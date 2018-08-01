@@ -31,9 +31,3 @@
 			}
 		});
 	<script>
-
-<img src="https://github.com/leiyh/datePicker/blob/master/examples/date.png" style="width:150px">
-	
-<img src="https://github.com/leiyh/datePicker/blob/master/examples/time.png" style="width:150px">
-	
-<img src="https://github.com/leiyh/datePicker/blob/master/examples/dateTime.png" style="width:150px">
