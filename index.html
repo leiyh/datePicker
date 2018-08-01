@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<title>datePicker</title>
+	<style>
+	*{ margin:0; padding:0; margin:0; box-sizing:border-box; }
+	h1{ font-size:16px; color:#000; line-height:32px; text-indent:10px; font-weight:normal; }
+	.block{ margin:10px; background:#f6f6f6; padding:10px; }
+	.block h2{ font-size:16px; color:#333; line-height:32px; font-weight:normal; }
+	.block input{ background:#fff; border:#eee 0.5px solid; height:40px; text-indent:10px; display:block; width:100%; -webkit-appearance:none; font-size:16px; }
+	</style>
+	<link rel="stylesheet" href="css/datePicker.css">
+</head>
+<body>
+	<h1>日期选择</h1>
+	<div class="block">
+		<h2>日期</h2>
+		<input type="text" readonly="readonly" placeholder="请选择年月日" id="datePicker">
+	</div>
+	<div class="block">
+		<h2>时间</h2>
+		<input type="text" readonly="readonly" placeholder="请选择时间" id="datePicker2">
+	</div>
+	<div class="block">
+		<h2>日期时间</h2>
+		<input type="text" readonly="readonly" placeholder="请选择年月日时间" id="datePicker3">
+	</div>
+	<script src="js/hammer.min.js"></script>
+	<script src="js/datePicker.js"></script>
+	<script>
+	var date = new DatePicker({
+		el: document.querySelector('#datePicker'),
+		title: '请选择',
+		max: 2050,
+		min: 1990,
+		split: '-',
+		type: 'date',
+		confirm: function(value) {
+			console.log(value, '确定');
+		},
+		cancel: function() {
+			console.log('取消');
+		}
+	});
+
+	var time = new DatePicker({
+		el: document.querySelector('#datePicker2'),
+		title: '请选择',
+		max: 2050,
+		min: 1990,
+		split: '-',
+		type: 'time',
+		confirm: function(value) {
+			console.log(value, '确定');
+		},
+		cancel: function() {
+			console.log('取消');
+		}
+	});
+
+	var dateTime = new DatePicker({
+		el: document.querySelector('#datePicker3'),
+		title: '请选择',
+		max: 2050,
+		min: 1990,
+		split: '-',
+		type: 'dateTime',
+		confirm: function(value) {
+			console.log(value, '确定');
+		},
+		cancel: function() {
+			console.log('取消');
+		}
+	});
+	</script>
+</body>
+</html>
